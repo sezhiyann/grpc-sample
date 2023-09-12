@@ -1,6 +1,7 @@
 package org.example.grpc.server;
 
 import io.grpc.stub.StreamObserver;
+import net.devh.boot.grpc.server.service.GrpcService;
 import org.example.grpc.common.Product;
 import org.example.grpc.common.ProductRequest;
 import org.example.grpc.common.ProductResponse;
@@ -9,6 +10,7 @@ import org.example.grpc.common.ProductServiceGrpc;
 import java.util.List;
 import java.util.Random;
 
+@GrpcService
 public class ProductServiceImpl extends ProductServiceGrpc.ProductServiceImplBase {
     private static Random random = new Random();
     @Override
